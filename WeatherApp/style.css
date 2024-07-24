@@ -1,0 +1,115 @@
+/* GoogleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+/* Variables css */
+:root{
+    --light-gray:#e5e5e5;
+    --darkblue: #272743;
+    --font: "Bodoni Moda SC", serif;
+}
+
+*{
+margin: 0;
+box-sizing: border-box;
+padding: 0;
+font-family: var(--font);
+
+
+}
+
+/* body */
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkblue);
+}
+
+/* container */
+.container{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:var(--darkblue);
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid var(--darkblue);
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    background: linear-gradient(45deg, #0052d4, #4364f7, #6fb1fc), 200%, 200%;
+    z-index: -1 ;
+    filter: blur(50px);
+}
+
+/* input */
+.container .inputbox{
+    display: flex;
+    gap: 3px;
+    margin-bottom: 25px;
+    
+}
+.container .inputbox input{
+    border: none;
+    border: 1px solid var(--light-gray);
+    background:transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 225px;
+    color: var(--light-gray);
+}
+
+.container .inputbox input:focus{
+outline: none;
+}
+
+/* button */
+.container .inputbox button{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    background: var(--light-gray);
+    color: var(--darkblue);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .inputbox button:hover{
+    background: #aca9bb;
+}
+/* container clima */
+.container .container-clima{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    
+}
+
+.container .container-clima h2{
+    font-size: 1.5em;
+    color: var(--light-gray);
+
+}
+
+.container .container-clima p{
+    color:var(--light-gray);
+}
